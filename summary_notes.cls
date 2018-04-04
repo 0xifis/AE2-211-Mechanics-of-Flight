@@ -1,4 +1,4 @@
-\LoadClass[11pt, oneside]{article}
+\LoadClass[11pt, oneside]{report}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{summary_notes}[2018/01/11 Latex Class for Simple Module Summary Notes. Works better with <3.]
 
@@ -16,6 +16,7 @@
 \graphicspath{ {figs/} }
 \RequirePackage{commath}
 \RequirePackage[ddmmyy]{datetime}
+\RequirePackage{newclude}
 
 % Hyperlinks/Bookmarks in TOC
 \RequirePackage[pagebackref]{hyperref}
@@ -59,6 +60,3 @@
 \newenvironment{rcases}
   {\left.\begin{aligned}}
   {\end{aligned}\hspace{3pt}\right\rbrace\hspace{5pt}}
-
-% Make title bold
-\renewcommand{\title}[1]{\title{\textbf{#1}}}
