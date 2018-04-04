@@ -59,3 +59,6 @@
 \newenvironment{rcases}
   {\left.\begin{aligned}}
   {\end{aligned}\hspace{3pt}\right\rbrace\hspace{5pt}}
+
+% Make title bold
+\renewcommand{\title}[1]{\title{\textbf{#1}}}
