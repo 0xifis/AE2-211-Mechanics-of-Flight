@@ -17,6 +17,7 @@
 \RequirePackage{commath}
 \RequirePackage[ddmmyy]{datetime}
 \RequirePackage{newclude}
+\RequirePackage{fancyhdr}
 
 % Hyperlinks/Bookmarks in TOC
 \RequirePackage[pagebackref]{hyperref}
@@ -60,3 +61,10 @@
 \newenvironment{rcases}
   {\left.\begin{aligned}}
   {\end{aligned}\hspace{3pt}\right\rbrace\hspace{5pt}}
+\newcommand{\makeheader}[2]{
+  \pagestyle{fancy}
+  \fancyhf{}
+  \rhead{#2}
+  \lhead{#1}
+  \cfoot{\thepage}
+}
