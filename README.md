@@ -29,5 +29,5 @@ derive approximate relations for the six dynamic modes of conventional aircraft.
 the control forces required for a pitch-up manoeuvre.
 
 ### License
-The content of this project is licensed under the [Creative Commons Attribution Share Alike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. However, the source code used to display and format the content is licensed under the [The LaTeX Project Public License
+The content of this project is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. However, the source code used to display and format the content is licensed under the [The LaTeX Project Public License
 ](https://www.latex-project.org/lppl.txt)
