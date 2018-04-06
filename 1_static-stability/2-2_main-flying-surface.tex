@@ -1,0 +1,50 @@
+\subsection{Main Flying Surface - Wing}
+For the wing, lift, $L_W$, and coefficient of lift, $\CLW$, are given by
+\begin{subequations}
+  \begin{equation}
+    L_W = \frac{1}{2}\rho V^2_{\infty} S_{ref} \CLW = q_{\infty} S_{ref} \CLW
+  \end{equation}
+  \begin{equation}
+    \CLW = a_W(\alpha + i_W - \alpha_{0W}) = \CLOW + a_W\alpha
+  \end{equation}  
+\end{subequations}
+
+Similarly, the drag, $D_W$, and coefficient of drag, $\CDW$, are given by
+
+\begin{subequations}
+  \begin{equation}
+    D_W = \frac{1}{2}\rho V^2_{\infty} S_{ref} \CDW = q_{\infty} S_{ref} \CDW
+  \end{equation}
+  \begin{equation}
+    \CDW = \CDOW + \frac{1}{\pi \AR e}\CLW^2
+  \end{equation}  
+\end{subequations}
+
+The \textbf{centre of pressure}, $\xbcp$, is 
+\begin{equation}
+  \xbcp = \frac{\xcp}{c} = \frac{\int^1_0 \frac{x}{c}\Delta p d\frac{x}{c}}{\int^1_0 \Delta p d\frac{x}{c}}
+\end{equation}
+\begin{enumerate}
+  \item \textbf{Effect of reflex:} causes $\xbcp$ to reduce or move towards the tip.
+  \item \textbf{Effect of camber:} causes $\xbcp$ to increase or move towards the root. The pressure force contributed by the camber profile, $F_{CP}$ is independent of $\alpha$ and depends only on camber profile.
+  \item \textbf{Effect of AoA:} force contributed by AoA, $F_{\alpha}$, is $~2\pi\alpha$ and acts at $\xbcp = 0.25$
+\end{enumerate}
+
+Since $\xbcp$ is not always fixed, a new reference point is used instead. The \textbf{Aerodynamic Centre}, $\xbac$, is a fixed point about which the aerodynamic forces remain constant but with a pitching moment about it.
+\begin{equation}
+  \xac = \frac{2}{S_{ref}}\int^s_0x_{\nicefrac{c}{4}}cdy
+\end{equation}
+The \textbf{Mean Aerodynamic Chord} for tapered, swept wings is
+\begin{equation}
+  \bar{c} = \frac{2}{S_{ref}}\int^s_0c^2dy
+\end{equation}
+
+Therefore, \textbf{Pitching Moment} is
+\begin{subequations}
+  \begin{equation}
+    M_W = M_{0W} + (x - x_{ac})L_W
+  \end{equation}
+  \begin{equation}
+    \CMW = \CMOW + (\bar{x} - \xbac)\CLW
+  \end{equation}
+\end{subequations}

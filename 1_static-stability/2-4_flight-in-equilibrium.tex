@@ -1,0 +1,42 @@
+\subsection{Flight in Equilibrium}
+Now lets consider the aircraft with the wing and tail as 1.
+\begin{equation}
+  L = L_W + L_H \rightarrow \CL = \CLW + \frac{S_H}{S_{ref}}\CLH
+\end{equation}
+After expanding equation 1.2.14, using equations 1.2.13 and 1.2.2b, we get the lift curve slope for the whole aircraft,
+\begin{equation}
+  a = \frac{dC_L}{d\alpha} = a_W + \frac{S_H}{S_{ref}}(1-\frac{d\epsilon}{d\alpha})a_H
+\end{equation}
+Similarly, pitching moment is
+\begin{equation}
+  M = M_{0W} + (\xcg - \xw)L_W + M_{0H} + (\xcg-\xH)L_H
+\end{equation}
+\begin{equation}
+  C_M = \CMOW + \frac{(\xcg - \xw)}{\bar{c}}\CLW + \frac{S_H}{S_{ref}}\left(\frac{\bar{c}_H}{\bar{c}}\CMOH + \frac{\xcg -\xH}{\bar{c}_W}\CLH\right)
+\end{equation}
+Disregarding zero-lift moments contributed by trim and elevator tabs and going crazy with the expansion,
+\begin{equation}
+  C_M = \CMOW + \frac{(\xcg - \xw)}{\bar{c}}(\CLOW + a_W\alpha) + \frac{S_H}{S_{ref}}\frac{\xcg -\xH}{\bar{c}_W}\left[\CLOH + a_H(1-\frac{d\epsilon}{d\alpha})\alpha +a_E\delta_E+a_T\delta_T\right]
+\end{equation}
+From equation 1.2.14, we have $\CLW = C_L - \frac{S_H}{S_{ref}}\CLH$. Therefore, equation 1.2.17 can be expressed in terms of total aircraft $C_L$ and tailplane parameters.
+\begin{align}
+  C_M &= \CMOW + \frac{(\xcg - \xw)}{\bar{c}}C_L + \frac{S_H}{S_{ref}}\left[\frac{\xcg -\xH}{\bar{c}_W}\CLH - \frac{\xcg -\xw}{\bar{c}_W}\CLH \right] \\
+  &= \CMOW + \frac{(\xcg - \xw)}{\bar{c}}C_L + \overline{V}_H\CLH
+\end{align}
+
+where the tail volume coefficient is,
+\begin{equation}
+  \overline{V}_H = \frac{S_H (\xcg - \xH)}{S_{ref}\bar{c}} = \frac{S_Hl_H}{S_{ref}\bar{c}}
+\end{equation}
+
+Going full circle, in order to achieve equilibrium, the following conditions must be met.
+\begin{subequations}
+  \begin{equation}
+    C_L = \frac{W}{\nicefrac{1}{2}\rho V^2_\infty S_{ref}}
+  \end{equation}
+  \begin{equation}
+    C_M = 0
+  \end{equation}
+\end{subequations}
+
+
