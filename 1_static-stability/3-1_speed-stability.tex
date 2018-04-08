@@ -1,1 +1,108 @@
 \section{Longitudinal Static Stability}
+\subsection{Speed Stability}
+For horizontal speed stability, an increase in $V_\infty$ must result in reduction of net force in the direction of velocity,
+
+\begin{equation}
+   X = Thrust - Drag \rightarrow \frac{\partial X}{\partial V_\infty} < 0
+ \end{equation}
+
+which only holds true if the aircraft is flying above the minimum drag speed. (from Aircraft Performance)
+
+For vertical speed stability, downward velocity, ($W$), must result in reduction of net downward forces,
+\begin{equation}
+  Z = Weight - Lift \rightarrow \frac{\partial Z}{\partial W} < 0
+\end{equation}
+The aircraft is always statically stable in this regard.
+
+\subsection{Pitch Stability}
+An increase in AoA must result in a negative pitching moment (nose down).
+\begin{equation}
+  \frac{C_M}{\alpha} < 0 \rightarrow \frac{d C_M / d\alpha}{d C_L/d\alpha} = \frac{dC_M}{dC_L} < 0
+\end{equation}
+
+\subsection{Stick-Fixed Static Stability}
+Starting from equation 1.2.20c and differentiating wrt. $C_L$,
+
+\begin{subequations}
+  \begin{equation}
+    \frac{d\CMOW}{d C_L} = 0\qquad,\qquad\frac{\partial \CLH}{\partial C_L} = \frac{\partial \CLH}{\partial \alpha}\times\frac{\partial \alpha}{\partial C_L} = \frac{a_H}{a}\left(1 - \frac{d\epsilon}{d\alpha}\right)
+  \end{equation}
+  \begin{equation}
+    \frac{dC_M}{dC_L} = (\xbcg - \xbw) - \overline{V}_H\frac{a_H}{a}\left(1 - \frac{d\epsilon}{d\alpha}\right) < 0
+  \end{equation}
+\end{subequations}
+
+Therefore, stick-fixed static stability depends on
+\begin{enumerate}
+  \item the relative positions of CG and the aerodynamic surface
+  \item the wing and tailplane lift curve slopes
+  \item the wing and tailplane surface areas
+\end{enumerate}
+
+Considering a neutrally stable case, we get,
+\begin{equation}
+  \frac{dC_M}{dC_L} = 0 \rightarrow \xbnp = \xbw + \overline{V}_H\frac{a_H}{a}\left(1 - \frac{d\epsilon}{d\alpha}\right)
+\end{equation}
+Therefore,
+\begin{equation}
+  \frac{dC_M}{dC_L} = \xbcg - \xbnp
+\end{equation}
+and for stability,
+\begin{equation}
+  \xbcg - \xbnp < 0 \rightarrow \xbcg < \xbnp
+\end{equation}
+The aircraft's level of stability, is defined in terms of its static margin,
+\begin{equation}
+  K_n = \xbnp - \xbcg
+\end{equation}
+Higher the $K_n$, the larger the restorative pitching moment, leading to a very stable but sluggish aircraft and vice versa.
+
+\subsection{Stick-Free Static Stability}
+Similarly, differentiating equation 1.2.20c wrt. $C_L$, gives
+\begin{equation}
+  \frac{dC_M}{dC_L} = (\xbcg - \xbw) - \overline{V}_H\left[\frac{a_H}{a}\left(1 - \frac{d\epsilon}{d\alpha}\right)+a_E\frac{d\delta_E}{dC_L}\right] < 0
+\end{equation}
+as $\nicefrac{d\delta_E}{dC_L} \neq = 0$ in this case because the elevator is free to move (but trim tab is still fixed).
+
+But that also means that we can consider the elevator hinge moment to determine equilibrium.
+
+\begin{equation}
+  H = qS_e\bar{c}_eC_H
+\end{equation}
+Then, $C_H$ is defined as 
+\begin{subequations}
+  \begin{align}
+    C_H &= b_0 + \frac{dC_H}{d\alpha_H}\alpha_H + \frac{dC_H}{d\delta_E}\delta_E + \frac{dC_H}{d\delta_T}\delta_T\\
+    &= b_0 + b_H\alpha_H + b_E\delta_E + b_T\delta_T
+  \end{align}
+\end{subequations}
+Substituting in equation 1.2.10,
+\begin{equation}
+  C_H = b_0 + b_H\left[\alpha\left(1- \frac{d\epsilon}{d\alpha}\right)+i_H - \epsilon_0\right] + b_E\delta_E + b_T\delta_T
+\end{equation}
+After much masterful rearranging with $C_H = 0$,
+\begin{equation}
+  \delta E = -\frac{b_H}{b_E}\left[ \alpha\left(1- \frac{d\epsilon}{d\alpha}\right)+i_H - \epsilon_0 \right] - \frac{b_T}{b_E}\delta_T - \frac{b_0}{b_E}
+\end{equation}
+Differentiating
+\begin{equation}
+  \frac{d\delta_E}{dC_L} = \frac{d\delta_E}{d\alpha}\times\frac{dC_L}{\alpha} = -\frac{1}{a}\frac{b_H}{b_E}\left(1- \frac{d\epsilon}{d\alpha}\right)
+\end{equation}
+Finally, bringing it full circle by substituting this into equation 1.3.9 and simplifying to get
+\begin{equation}
+  \frac{dC_M}{dC_L} = (\xbcg - \xbw) - \overline{V}_H\frac{a_H}{a}\left(1 - \frac{d\epsilon}{d\alpha}\right)\left[1-\frac{a_E}{a_H}\frac{b_H}{b_E}\right]
+\end{equation}
+Similar to the stick-fixed case, the \textit{stick-free} neutral point and static margins are
+\begin{subequations}
+  \begin{equation}
+    \bar{x}'_{np} = \xbw + \overline{V}_H\frac{a_H}{a}\left(1 - \frac{d\epsilon}{d\alpha}\right)\left[1-\frac{a_E}{a_H}\frac{b_H}{b_E}\right]
+  \end{equation}
+  \begin{equation}
+    K'_n = \bar{x}'_{np} - \xbcg
+  \end{equation}
+\end{subequations}
+Also because $a_h,a_E > 0 $ and $ b_h,b_E < 0$ in most cases,
+\begin{equation}
+  \left[1-\frac{a_E}{a_H}\frac{b_H}{b_E}\right] \leq 1 \rightarrow \bar{x}'_{np} \leq \xbnp \rightarrow K'_n \leq K_n
+\end{equation}
+if the aircraft is statically stable in the stick-free case, it also stable in the stick-fixed case. At also means that, if $b_H/b_E$ gets large, the free elevator could reduce or reverse the stabilising effect of the tailplane.

@@ -19,10 +19,13 @@ Disregarding zero-lift moments contributed by trim and elevator tabs and going c
   C_M = \CMOW + \frac{(\xcg - \xw)}{\bar{c}}(\CLOW + a_W\alpha) + \frac{S_H}{S_{ref}}\frac{\xcg -\xH}{\bar{c}_W}\left[\CLOH + a_H(1-\frac{d\epsilon}{d\alpha})\alpha +a_E\delta_E+a_T\delta_T\right]
 \end{equation}
 From equation 1.2.14, we have $\CLW = C_L - \frac{S_H}{S_{ref}}\CLH$. Therefore, equation 1.2.17 can be expressed in terms of total aircraft $C_L$ and tailplane parameters.
-\begin{align}
-  C_M &= \CMOW + \frac{(\xcg - \xw)}{\bar{c}}C_L + \frac{S_H}{S_{ref}}\left[\frac{\xcg -\xH}{\bar{c}_W}\CLH - \frac{\xcg -\xw}{\bar{c}_W}\CLH \right] \\
-  &= \CMOW + \frac{(\xcg - \xw)}{\bar{c}}C_L + \overline{V}_H\CLH
-\end{align}
+\begin{subequations}
+  \begin{align}
+    C_M &= \CMOW + \frac{(\xcg - \xw)}{\bar{c}}C_L + \frac{S_H}{S_{ref}}\left[\frac{\xcg -\xH}{\bar{c}_W}\CLH - \frac{\xcg -\xw}{\bar{c}_W}\CLH \right] \\
+    &= \CMOW + \frac{(\xcg - \xw)}{\bar{c}}C_L + \overline{V}_H\CLH \\
+    C_M &= \CMOW + (\xbcg - \xbw)C_L + \overline{V}_H\CLH 
+  \end{align}
+\end{subequations}
 
 where the tail volume coefficient is,
 \begin{equation}
