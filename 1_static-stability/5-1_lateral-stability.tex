@@ -1,0 +1,35 @@
+\section{Lateral Static Stability}
+In addition to a restorative yawning moment when sideslipping, it is desirable for the aircraft to roll in the opposite direction of the sideslip. In order for the aircraft to roll, a rolling moment, $L$ (positive in left wing up sense), has to be generated such that
+\begin{equation}
+  \frac{dL}{d\beta} < 0
+\end{equation}
+There are 3 major contributing wing design aspects:
+\begin{enumerate}
+  \item vertical position on the fuselage
+  \item sweep angle
+  \item dihedral/anhedral angle
+\end{enumerate}
+\subsection{Effect of Wing Vertical Position on the Fuselage}
+For the high-wing configuration, for $\beta>0$, the AoA of the starboard wing is increased but that of the port wing is reduced as the fuselage forces the air to go around it and vice versa for the low-wing configuration. Therefore,
+\begin{enumerate}
+  \item High-wing - stabilising effect ($L < 0$)
+  \item Mid-Wing  - no rolling moment ($L = 0$)
+  \item Low-wing  - destabilising effect ($L > 0$)
+\end{enumerate}
+\subsection{Effect of Wing Sweep Angle}
+For $\beta>0$, the effective AoA of a aft-swept, port wing is reduced while that of the aft-swept, starboard wing is increased. Using simple sweep theory,
+\begin{equation}
+  a_{swept,port} = a_{unswept}\cos^2(\Lambda - \beta)
+\end{equation}
+This, creating a negative roll moment (stabilising effect) and vice versa for a forward-swept wing.
+\subsection{Effect of Wing Dihedral/Anhedral Angle}
+A dihedral angle, $\Gamma$, will cause the sideslip velocity to induce an upward velocity normal to the starboard wing. As a result, the effective AoA of the starboard wing increases and vice versa for the port wing.
+\begin{equation}
+  \alpha_{eff} = \alpha \pm \frac{V_\infty\sin\beta\sin\Gamma}{V_\infty}
+\end{equation}
+\subsection{Effect of Vertical Stabiliser}
+There is also a stabilising contribution to the aircraft's lateral stability by the vertical (dorsal) stabiliser.
+\begin{equation}
+  \frac{dL}{d\beta}_V = - \frac{S_V(z_V - z_{CG})}{S_{ref}b}a_V
+\end{equation}
+Similarly, a ventral fin will have a destabilising effect.

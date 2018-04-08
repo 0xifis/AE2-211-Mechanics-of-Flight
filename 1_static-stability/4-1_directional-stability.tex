@@ -1,0 +1,23 @@
+\section{Direction Static Stability}
+Given a sideslip angle, $\beta$, for directional stability, the aircraft must have a natural tendency to develop a yawing moment, $N$, about the CG. ($+ve$ in CW from the top)
+\begin{equation}
+  \frac{dN}{d\beta} > 0
+\end{equation}
+for directional stability. The vertical stabiliser is the main source of yawing moment.
+\begin{subequations}
+  \begin{equation}
+    N = (x_V - \xcg)L_V
+  \end{equation}
+  \begin{equation}
+    L_V = qS_VC_{L_V} = qS_Va_V\beta
+  \end{equation}
+\end{subequations}
+Since yawing moment is often represented non-dimensionally as 
+\begin{equation}
+  C_N = \frac{N}{qS_{ref}b}
+\end{equation}
+Therefore for the vertical stabiliser's contribution to directional stability,
+\begin{equation}
+  \frac{dN}{d\beta}_V = \frac{S_V(x_V-\xcg)}{S_{ref}b}a_V= \overline{V}_Va_V > 0
+\end{equation}
+Do note, that the fuselage contributes substantial destabilising effect so typically, $\overline{V}_Va_V$ has to be between $0.6$ and $0.9$.
